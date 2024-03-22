@@ -119,7 +119,7 @@ CSV_STATS_FLUSH_INTERVAL_SEC = 10
 Default window size/resolution - in seconds - when calculating the current
 response time percentile
 """
-CURRENT_RESPONSE_TIME_PERCENTILE_WINDOW = 10
+CURRENT_RESPONSE_TIME_PERCENTILE_WINDOW = 2
 
 CachedResponseTimes = namedtuple("CachedResponseTimes", ["response_times", "num_requests"])
 
@@ -127,7 +127,7 @@ PERCENTILES_TO_REPORT = [0.50, 0.66, 0.75, 0.80, 0.90, 0.95, 0.98, 0.99, 0.999, 
 
 PERCENTILES_TO_STATISTICS = [0.95, 0.99]
 PERCENTILES_TO_CHART = [0.50, 0.95]
-MODERN_UI_PERCENTILES_TO_CHART = [0.95]
+MODERN_UI_PERCENTILES_TO_CHART = [0.50, 0.95]
 
 
 class RequestStatsAdditionError(Exception):
